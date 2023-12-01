@@ -111,22 +111,16 @@ jobs:
       - name: Download PR Number Artifact
         uses: dawidd6/action-download-artifact@268677152d06ba59fcec7a7f0b5d961b6ccd7e1e #v2.28.0
         with:
-          workflow: "coverage.yml"
-          run_id: ${{ github.run_id }}
           name: pr_number
 
       - name: Download Base Coverage Artifact
         uses: dawidd6/action-download-artifact@268677152d06ba59fcec7a7f0b5d961b6ccd7e1e #v2.28.0
         with:
-          workflow: "coverage.yml"
-          run_id: ${{ github.run_id }}
           name: ref_code_coverage
 
       - name: Download Current Coverage Artifact
         uses: dawidd6/action-download-artifact@268677152d06ba59fcec7a7f0b5d961b6ccd7e1e #v2.28.0
         with:
-          workflow: "coverage.yml"
-          run_id: ${{ github.run_id }}
           name: current_code_coverage
 
       - name: Set PR Number Environment Variables
